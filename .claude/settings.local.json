@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export JAVA_HOME=\"/Applications/Android Studio.app/Contents/jbr/Contents/Home\")",
+      "Bash(/Users/dan/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager \"ndk;28.2.13676358\")",
+      "Bash(flutter pub get:*)",
+      "Bash(flutter devices:*)",
+      "Bash(flutter run:*)"
+    ]
+  }
+}

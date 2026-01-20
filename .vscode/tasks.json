@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Launch Android Emulator",
+      "type": "shell",
+      "command": "${env:HOME}/Library/Android/sdk/emulator/emulator",
+      "args": [
+        "-avd",
+        "Medium_Phone_API_36.1"
+      ],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "List Android Emulators",
+      "type": "shell",
+      "command": "${env:HOME}/Library/Android/sdk/emulator/emulator",
+      "args": [
+        "-list-avds"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Run Flutter on Android",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "run",
+        "-d",
+        "android"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": "Launch Android Emulator"
+    },
+    {
+      "label": "Flutter: Get Devices",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "devices"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
